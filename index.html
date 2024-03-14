@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dosis:wght@200..800&family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dosis:wght@200..800&family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Formulário</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>Crie e compartilhe seu evento.</h1>
+        <p>O primeiro passo, é preencher esse formulário de inscrição.</p>
+      </header>
+
+      <form action="#" method="get" id="my-form">
+        <fieldset>
+          <div class="form">
+            <legend>Informações do Evento</legend>
+
+            <label for="titulo">Título do evento <span>(mínimo 8 caracteres)</span></label>
+            <input type="text" id="titulo" required/>
+
+            <label for="link">Link do evento <span>(comece com https://)</span></label>
+            <input type="url" id="link" />
+
+            <label for="whats">Whatsapp para contato <span>(somente números)</span></label>
+            <input type="number" id="whats" />
+
+            <label for="inf">Informações extras</label>
+            <textarea id="inf" cols="30" rows="10"></textarea>
+
+            <label for="event">Categoria</label>
+            <select id="event">
+              <option value="type1">Ao vivo</option>
+              <option value="type2">Curso</option>
+              <option value="type3">Show</option>
+            </select>
+
+            <legend>Privacidade</legend>
+
+            <label for="email">
+              E-mail do administrador
+              <span>(digite um email válido)</span>
+            </label>
+            <input type="email" id="email" />
+
+            <label for="password">
+              Senha de acesso para os participantes
+              <span>(mínimo 8 caracteres)</span>
+            </label>
+            <input type="password" id="password" />
+
+            <div class="private-box">
+              <input type="checkbox" id="box"/> 
+              <label for="box"> Evento privado</label>
+            </div>  
+
+            <legend>Dia e hora</legend>
+
+            <div class="colum3">
+              <div class="input-colum">
+                <label for="date">Data</label>
+                <input type="date" id="date" />
+              </div>
+              <div class="input-colum">
+                <label for="hourStart">Das</label>
+                <input type="time" id="hourStart" />
+              </div>
+              <div class="input-colum">
+                <label for="hourEnd">Até</label>
+                <input type="time" id="hourEnd" />
+              </div>
+            </div>
+        </fieldset>
+
+          <footer>
+            <div class="down">
+              <button type="submit" form="my-form">Salvar evento</button>
+            </div>
+          </footer>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
